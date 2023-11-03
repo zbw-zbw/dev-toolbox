@@ -1,27 +1,58 @@
 {
   "name": "dev-toolbox",
   "version": "0.1.0",
+  "description": "Your coding partner to improve your efficiency.",
+  "keywords": [
+    "web",
+    "dev",
+    "development",
+    "tool",
+    "tools",
+    "toolbox",
+    "toolkit"
+  ],
+  "homepage": "https://github.com/zbw-zbw/dev-toolbox",
+  "bugs": {
+    "url": "https://github.com/zbw-zbw/dev-toolbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zbw-zbw/dev-toolbox"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier . --write --ignore-unknown",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "pnpm prettier"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.17.2",
+    "antd": "^5.10.3",
+    "dayjs": "^1.11.10",
+    "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.1"
+    "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "postcss": "^8",
+    "prettier": "3.0.3",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }

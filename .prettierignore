@@ -1,0 +1,10 @@
+build
+coverage
+
+dist
+.next
+
+**/.git
+**/.svn
+**/.hg
+**/node_modules
