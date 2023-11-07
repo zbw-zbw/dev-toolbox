@@ -8,6 +8,7 @@ import theme from '@/theme/themeConfig';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FloatButtonGroup from '@/components/FloatButtonGroup';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             {children}
             <Footer />
+            <FloatButtonGroup />
           </ConfigProvider>
         </StyledComponentsRegistry>
       </body>

@@ -5,7 +5,6 @@ import dayjs, { Dayjs } from 'dayjs';
 import { Button, DatePicker, Input } from 'antd';
 
 import CopyBtn from '@/components/CopyBtn';
-import FloatButtonGroup from '@/components/FloatButtonGroup';
 
 const template = 'YYYY-MM-DD HH:mm:ss';
 
@@ -71,7 +70,6 @@ function Timestamp() {
           </div>
         </div>
       </div>
-      <FloatButtonGroup />
     </div>
   );
 }

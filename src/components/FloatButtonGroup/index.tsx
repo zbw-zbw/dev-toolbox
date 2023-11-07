@@ -1,4 +1,7 @@
+'use client';
+
 import { FloatButton, Tooltip } from 'antd';
+
 import { RollbackOutlined, SyncOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 
@@ -14,7 +17,7 @@ function FloatButtonGroup() {
   };
 
   return (
-    <FloatButton.Group style={{ right: 40, bottom: 40 }}>
+    <FloatButton.Group style={{ right: 20, bottom: 100 }}>
       <Tooltip placement="left" title="返回首页">
         <FloatButton icon={<RollbackOutlined />} onClick={handleBackHome} />
       </Tooltip>

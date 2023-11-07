@@ -14,7 +14,7 @@ export const tools = [
   {
     title: 'URL 编码/解码',
     desc: 'URL 编码/解码工具',
-    path: '/url',
+    path: '/url-decode',
     icon: '/url.png',
   },
   {
@@ -26,13 +26,13 @@ export const tools = [
   {
     title: 'JSON 格式化',
     desc: 'JSON 格式化工具',
-    path: '/json',
+    path: '/json-format',
     icon: '/json.png',
   },
   {
     title: '文件对比',
     desc: '文件对比工具',
-    path: '/diff',
+    path: '/file-diff',
     icon: '/diff.png',
   },
   {
@@ -44,37 +44,37 @@ export const tools = [
   {
     title: 'JSON to TS',
     desc: 'JSON 转换成 Typescript 类型工具',
-    path: '/ts',
+    path: '/json-to-ts',
     icon: '/ts.png',
   },
   {
     title: '数字转人民币',
     desc: '数字转人民币工具',
-    path: '/rmb',
+    path: '/num-to-rmb',
     icon: '/rmb.png',
   },
   {
     title: '代码着色',
     desc: '代码着色工具',
-    path: '/highlight',
+    path: '/code-highlight',
     icon: '/highlight.png',
   },
   {
     title: '代码在线运行',
     desc: '代码在线运行工具',
-    path: '/code',
+    path: '/code-run',
     icon: '/code.png',
   },
   {
     title: '代码生成图片',
     desc: '代码生成图片工具',
-    path: '/pic',
+    path: '/code-to-pic',
     icon: '/pic.png',
   },
   {
     title: '颜色选择器',
     desc: '颜色选择工具',
-    path: '/color',
+    path: '/color-picker',
     icon: '/color.png',
   },
   {
@@ -84,39 +84,39 @@ export const tools = [
     icon: '/uuid.png',
   },
   {
-    title: '字数统计',
-    desc: '字数统计工具',
-    path: '/count',
+    title: '字符统计',
+    desc: '字符统计工具',
+    path: '/str-count',
     icon: '/count.png',
   },
   {
     title: 'MD5 加密',
     desc: 'MD5 加密工具',
-    path: '/lock',
+    path: '/md5-lock',
     icon: '/lock.png',
   },
   {
     title: '图片压缩',
     desc: '图片压缩工具',
-    path: '/zip',
+    path: '/pic-zip',
     icon: '/zip.png',
   },
   {
     title: 'Markdown 编辑器',
     desc: 'Markdown 在线编辑器',
-    path: '/markdown',
+    path: '/markdown-editor',
     icon: '/markdown.png',
   },
   {
     title: 'favicon 制作',
     desc: 'favicon 制作工具',
-    path: '/favicon',
+    path: '/favicon-create',
     icon: '/favicon.png',
   },
   {
     title: 'IP 地址查询',
     desc: 'IP 归属地查询工具',
-    path: '/ip',
+    path: '/ip-check',
     icon: '/ip.png',
   },
 ];
