@@ -30,13 +30,7 @@ function Home() {
         <Row align="middle">
           <Col span={6}>
             <div className="flex items-center">
-              <Image
-                className="cursor-pointer ml-20"
-                src="/logo.png"
-                alt="logo"
-                width={48}
-                height={48}
-              />
+              <Image className="cursor-pointer ml-20" src="/logo.png" alt="logo" width={48} height={48} />
               <span className="ml-2 font-bold text-xl" style={{ color: '#52c41a' }}>
                 Dev Toolbox
               </span>

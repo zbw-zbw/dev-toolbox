@@ -70,9 +70,7 @@ function Timestamp() {
             <p>时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒.</p>
             <p>时间戳（英文为 Unix epoch, Unix time, POSIX time 或 Unix timestamp）.</p>
             <p> UNIX时间戳的 0 按照 ISO 8601 规范为 ：1970-01-01T00:00:00Z.</p>
-            <p>
-              一个小时表示为UNIX时间戳格式为：3600秒; 一天表示为UNIX时间戳为86400秒，闰秒不计算.
-            </p>
+            <p>一个小时表示为UNIX时间戳格式为：3600秒; 一天表示为UNIX时间戳为86400秒，闰秒不计算.</p>
             <p>在大多数的 Unix 系统中 Unix 时间戳存储为 32 位, 这样会引发 2038 年问题或 Y2038.</p>
           </div>
         </div>
