@@ -6,6 +6,8 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
 import theme from '@/theme/themeConfig';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className} suppressHydrationWarning>
         <StyledComponentsRegistry>
           <ConfigProvider theme={theme} locale={zhCN}>
+            <Header />
             {children}
+            <Footer />
           </ConfigProvider>
         </StyledComponentsRegistry>
       </body>
