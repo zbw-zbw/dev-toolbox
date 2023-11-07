@@ -1,0 +1,14 @@
+{
+  "函数组件": {
+    "scope": "typescriptreact",
+    "prefix": "fc",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE/^\\w/${0:/upcase}/}}() {",
+      "  return <div>$1</div>;",
+      "}",
+      "",
+      "export default $1;",
+      ""
+    ]
+  }
+}

@@ -8,3 +8,5 @@ dist
 **/.svn
 **/.hg
 **/node_modules
+
+/env
