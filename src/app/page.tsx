@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { Col, Row, Input, Button, Card, Tooltip, Space } from 'antd';
 import { useRouter } from 'next/navigation';
@@ -8,20 +7,21 @@ import dayjs from 'dayjs';
 import { GithubOutlined, TranslationOutlined } from '@ant-design/icons';
 
 import { tools } from './config';
+import useToggleMode from '@/hooks/useToggleMode';
 
 function Home() {
   const today = dayjs().format('YYYY-MM-DD');
 
-  const [isDark, setIsDark] = useState(false);
-
   const router = useRouter();
 
-  const toggleDark = () => {
-    setIsDark(!isDark);
-  };
+  const [isDarkMode, toggleMode] = useToggleMode();
 
   const handlePushRoute = (path: string) => {
     router.push(path);
+  };
+
+  const openGitHubHomePage = () => {
+    window.open('https://github.com/zbw-zbw/dev-toolbox');
   };
 
   return (
@@ -55,18 +55,18 @@ function Home() {
               <Tooltip placement="top" title="中文 / English">
                 <TranslationOutlined className="cursor-pointer" />
               </Tooltip>
-              <Tooltip placement="top" title={isDark ? '日间模式' : '暗夜模式'}>
+              <Tooltip placement="top" title={isDarkMode ? '日间模式' : '暗夜模式'}>
                 <Image
-                  src={isDark ? '/light.png' : '/dark.png'}
+                  src={isDarkMode ? '/light.png' : '/dark.png'}
                   alt="icon"
                   width={20}
                   height={20}
                   className="cursor-pointer"
-                  onClick={toggleDark}
+                  onClick={toggleMode}
                 ></Image>
               </Tooltip>
               <Tooltip placement="top" title="GitHub">
-                <GithubOutlined className="cursor-pointer" />
+                <GithubOutlined className="cursor-pointer" onClick={openGitHubHomePage} />
               </Tooltip>
             </Space>
           </Col>

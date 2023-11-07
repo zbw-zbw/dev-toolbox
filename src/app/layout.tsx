@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import { ConfigProvider } from 'antd';
+import zhCN from 'antd/locale/zh_CN';
 import theme from '@/theme/themeConfig';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
 
@@ -18,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning>
         <StyledComponentsRegistry>
-          <ConfigProvider theme={theme}>{children}</ConfigProvider>
+          <ConfigProvider theme={theme} locale={zhCN}>
+            {children}
+          </ConfigProvider>
         </StyledComponentsRegistry>
       </body>
     </html>

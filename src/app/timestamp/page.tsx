@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
-import { Button, DatePicker, Input, message } from 'antd';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Button, DatePicker, Input } from 'antd';
 
 import BackHomeBtn from '@/components/BackHomeBtn';
+import CopyBtn from '@/components/CopyBtn';
 
 const template = 'YYYY-MM-DD HH:mm:ss';
 
@@ -32,16 +32,10 @@ function Timestamp() {
 
   const convertTimestamp = () => {
     setTimestamp(dayjs(date).unix() * 1000);
-    message.success('转换成功');
   };
 
   const convertDate = () => {
     setNewDate(dayjs(+newTimestamp).format(template));
-    message.success('转换成功');
-  };
-
-  const onCopySuccess = () => {
-    message.success('复制成功');
   };
 
   return (
@@ -57,11 +51,7 @@ function Timestamp() {
               转换
             </Button>
             <Input value={timestamp} disabled style={{ width: 240 }} />
-            <CopyToClipboard text={`${timestamp}`} onCopy={onCopySuccess}>
-              <Button type="primary" className="ml-8 mr-8">
-                复制
-              </Button>
-            </CopyToClipboard>
+            <CopyBtn value={String(timestamp)} />
           </div>
           <div className="mb-4">转换时间戳</div>
           <div className="flex">
@@ -70,11 +60,7 @@ function Timestamp() {
               转换
             </Button>
             <Input value={newDate} disabled style={{ width: 240 }} />
-            <CopyToClipboard text={newDate} onCopy={onCopySuccess}>
-              <Button type="primary" className="ml-8 mr-8">
-                复制
-              </Button>
-            </CopyToClipboard>
+            <CopyBtn value={newDate} />
           </div>
         </div>
         <div className="mt-40">
