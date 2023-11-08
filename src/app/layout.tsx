@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StyledComponentsRegistry>
           <ConfigProvider theme={theme} locale={zhCN}>
             <Header />
-            {children}
+            <div className="flex flex-col items-center my-6">{children}</div>
             <Footer />
             <FloatButtonGroup />
           </ConfigProvider>

@@ -14,8 +14,8 @@ function Home() {
   };
 
   return (
-    <div className="content mx-auto my-6">
-      <Row gutter={[20, 20]}>
+    <div className="content">
+      <Row gutter={[20, 20]} className="px-5">
         {tools.map((item) => (
           <Col key={item.title} span={6}>
             <Card

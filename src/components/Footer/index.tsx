@@ -1,5 +1,7 @@
+'use client';
+
+import { theme } from 'antd';
 import dayjs from 'dayjs';
-import Link from 'next/link';
 
 function Footer() {
   const today = dayjs().format('YYYY-MM-DD');
@@ -9,7 +11,7 @@ function Footer() {
       <div>Copyright © 2023 | {today}</div>
       <div>
         <span className="mr-2">Author by:</span>
-        <a style={{ color: '#52c41a' }} target="_blank" href="https://github.com/zbw-zbw">
+        <a style={{ color: theme.useToken().token.colorPrimary }} target="_blank" href="https://github.com/zbw-zbw">
           zbw-zbw
         </a>
       </div>

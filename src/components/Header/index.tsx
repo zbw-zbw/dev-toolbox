@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Col, Row, Input, Button, Tooltip, Space } from 'antd';
+import { Col, Row, Input, Button, Tooltip, Space, theme } from 'antd';
 import { GithubOutlined, TranslationOutlined } from '@ant-design/icons';
 
 import useToggleMode from '@/hooks/useToggleMode';
@@ -26,7 +26,7 @@ function Header() {
         <Col span={4}>
           <div className="flex items-center cursor-pointer" onClick={handleBackHome}>
             <Image src="/logo.png" alt="logo" width={48} height={48} />
-            <span className="ml-2 font-bold text-xl" style={{ color: '#52c41a' }}>
+            <span className="ml-2 font-bold text-xl" style={{ color: theme.useToken().token.colorPrimary }}>
               Dev Toolbox
             </span>
           </div>
