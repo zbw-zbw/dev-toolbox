@@ -12,8 +12,8 @@ export const tools = [
     icon: '/qrcode.png',
   },
   {
-    title: 'URL 编码/解码',
-    desc: 'URL 编码/解码工具',
+    title: 'URL 编码 / 解码',
+    desc: 'URL 编码 / 解码工具',
     path: '/url-decode',
     icon: '/url.png',
   },
