@@ -38,9 +38,10 @@ function Timestamp() {
   };
 
   return (
-    <div className="flex flex-col mt-20">
-      <div className="text-2xl font-bold">现在是：{now}（北京时间）</div>
-      <div className="mt-10">
+    <div className="flex flex-col p-20">
+      <h2 className="mb-10 text-3xl font-bold">时间戳转换</h2>
+      <div className="text-xl font-bold">现在是：{now}（北京时间）</div>
+      <div className="mt-4">
         <div className="mb-2 font-bold">获取时间戳</div>
         <div className="flex mb-10">
           <DatePicker showTime value={date} onChange={onDateChange} style={{ width: 240 }} />
@@ -60,7 +61,7 @@ function Timestamp() {
           <CopyBtn value={newDate} />
         </div>
       </div>
-      <h2 className="mt-20 text-2xl font-bold">时间戳（Unix）：</h2>
+      <h2 className="mt-20 text-xl font-bold">时间戳（Unix）：</h2>
       <div className="mt-1 text-gray-400">从1970年1月1日开始所经过的秒数 Unix.</div>
       <div style={{ lineHeight: 3 }}>
         <p>Unix 时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。</p>

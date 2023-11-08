@@ -2,10 +2,13 @@ import { Button, message } from 'antd';
 import copy from 'copy-to-clipboard';
 
 interface IProps {
+  /** 复制的内容 */
   value: string;
+  /** 按钮文案 */
+  text?: string;
 }
 
-function CopyBtn({ value }: IProps) {
+function CopyBtn({ value, text = '复制' }: IProps) {
   const handleCopy = () => {
     try {
       copy(value);
@@ -18,7 +21,7 @@ function CopyBtn({ value }: IProps) {
 
   return (
     <Button type="primary" className="ml-8 mr-8" onClick={handleCopy}>
-      复制
+      {text}
     </Button>
   );
 }
