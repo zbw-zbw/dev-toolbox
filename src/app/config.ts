@@ -6,12 +6,6 @@ export const tools = [
     icon: '/timestamp.png',
   },
   {
-    title: '二维码生成器',
-    desc: '文本/链接生成二维码工具',
-    path: '/qrcode',
-    icon: '/qrcode.png',
-  },
-  {
     title: 'URL 编码 / 解码',
     desc: 'URL 编码 / 解码工具',
     path: '/url-decode',
@@ -22,6 +16,12 @@ export const tools = [
     desc: 'Unicode 编码工具',
     path: '/unicode',
     icon: '/unicode.png',
+  },
+  {
+    title: '二维码生成器',
+    desc: '文本 / 链接生成二维码工具',
+    path: '/qrcode',
+    icon: '/qrcode.png',
   },
   {
     title: 'JSON 格式化',

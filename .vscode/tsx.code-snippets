@@ -3,6 +3,8 @@
     "scope": "typescriptreact",
     "prefix": "fc",
     "body": [
+      "'use client';",
+      "",
       "function ${1:${TM_FILENAME_BASE/^\\w/${0:/upcase}/}}() {",
       "  return <div>$1</div>;",
       "}",
