@@ -21,8 +21,8 @@ function Header() {
   };
 
   return (
-    <div className="header sticky top-0 z-50 w-full px-10 py-6">
-      <Row align="middle">
+    <div className="header sticky top-0 z-50 w-full px-10">
+      <Row align="middle" className="h-full">
         <Col span={4}>
           <div className="flex items-center cursor-pointer" onClick={handleBackHome}>
             <Image src="/logo.png" alt="logo" width={48} height={48} />

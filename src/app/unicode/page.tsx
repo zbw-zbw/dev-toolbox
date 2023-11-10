@@ -35,7 +35,7 @@ function Unicode() {
   };
 
   return (
-    <div>
+    <div className="w-full mx-auto">
       <h2 className="mb-4 text-xl font-bold">Unicode 编码：</h2>
       <TextArea value={value} onChange={onValueChange} rows={12} placeholder="请把内容粘贴到此处" />
       <Space size="large" className="justify-end w-full mt-4 mb-20">

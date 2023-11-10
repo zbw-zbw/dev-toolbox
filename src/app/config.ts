@@ -18,16 +18,16 @@ export const tools = [
     icon: '/unicode.png',
   },
   {
-    title: '二维码生成器',
-    desc: '文本 / 链接生成二维码工具',
-    path: '/qrcode',
-    icon: '/qrcode.png',
-  },
-  {
     title: 'JSON 格式化',
     desc: 'JSON 格式化工具',
     path: '/json-format',
     icon: '/json.png',
+  },
+  {
+    title: '二维码生成器',
+    desc: '文本 / 链接生成二维码工具',
+    path: '/qrcode',
+    icon: '/qrcode.png',
   },
   {
     title: '文件对比',
