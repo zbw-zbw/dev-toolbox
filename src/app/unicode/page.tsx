@@ -3,7 +3,7 @@
 import { ChangeEvent, useState } from 'react';
 import { Button, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
-import CopyBtn from '@/components/CopyBtn';
+import CopyBtn from '@/components/copy-btn';
 import { chineseToUnicode, unicodeToChinese } from '@/utils/unicode';
 
 function Unicode() {

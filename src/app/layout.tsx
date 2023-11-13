@@ -6,9 +6,9 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/locale/zh_CN';
 import theme from '@/theme/themeConfig';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FloatButtonGroup from '@/components/FloatButtonGroup';
+import Header from '../components/page-header';
+import Footer from '../components/page-footer';
+import FloatButtonGroup from '@/components/float-buttons';
 
 const inter = Inter({ subsets: ['latin'] });
 

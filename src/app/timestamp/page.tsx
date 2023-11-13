@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import { Button, DatePicker, Input, InputNumber, Table } from 'antd';
 
-import CopyBtn from '@/components/CopyBtn';
+import CopyBtn from '@/components/copy-btn';
 import { columns, dataSource, template } from './config';
 
 function Timestamp() {
