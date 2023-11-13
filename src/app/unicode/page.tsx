@@ -1,10 +1,11 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, Space } from 'antd';
+import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import CopyBtn from '@/components/copy-btn';
 import { chineseToUnicode, unicodeToChinese } from '@/utils/unicode';
+import { isEmpty } from '@/utils/is';
 
 function Unicode() {
   const [value, setValue] = useState('');
@@ -19,10 +20,14 @@ function Unicode() {
   };
 
   const convertChinese = () => {
+    if (isEmpty(value)) return void message.error('内容不能为空');
+
     setResult(chineseToUnicode(value));
   };
 
   const convertUnicode = () => {
+    if (isEmpty(value)) return void message.error('内容不能为空');
+
     setResult(unicodeToChinese(value));
   };
 

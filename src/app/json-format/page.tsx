@@ -4,6 +4,7 @@ import { ChangeEvent, useState } from 'react';
 import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { JsonViewer } from '@textea/json-viewer';
+import { isEmpty } from '@/utils/is';
 
 function JSONFormat() {
   const [value, setValue] = useState('');
@@ -14,6 +15,8 @@ function JSONFormat() {
   };
 
   const formatJSON = () => {
+    if (isEmpty(value)) return void message.error('内容不能为空');
+
     try {
       setResult(JSON.parse(value));
     } catch (error) {

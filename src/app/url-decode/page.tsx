@@ -1,9 +1,10 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, Space } from 'antd';
+import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import CopyBtn from '@/components/copy-btn';
+import { isEmpty } from '@/utils/is';
 
 function UrlDecode() {
   const [value, setValue] = useState('');
@@ -18,10 +19,14 @@ function UrlDecode() {
   };
 
   const handleEncode = () => {
+    if (isEmpty(value)) return void message.error('内容不能为空');
+
     setResult(encodeURIComponent(value));
   };
 
   const handleDecode = () => {
+    if (isEmpty(value)) return void message.error('内容不能为空');
+
     setResult(decodeURIComponent(value));
   };
 

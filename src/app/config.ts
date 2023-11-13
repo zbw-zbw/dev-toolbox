@@ -24,6 +24,12 @@ export const tools = [
     icon: '/json.png',
   },
   {
+    title: 'UUID 生成器',
+    desc: 'UUID 生成工具',
+    path: '/uuid',
+    icon: '/uuid.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -77,12 +83,7 @@ export const tools = [
     path: '/color-picker',
     icon: '/color.png',
   },
-  {
-    title: 'UUID 生成器',
-    desc: 'UUID 生成工具',
-    path: '/uuid',
-    icon: '/uuid.png',
-  },
+
   {
     title: '字符统计',
     desc: '字符统计工具',
