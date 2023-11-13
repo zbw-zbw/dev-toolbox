@@ -30,6 +30,12 @@ export const tools = [
     icon: '/uuid.png',
   },
   {
+    title: '颜色选择器',
+    desc: '颜色选择工具',
+    path: '/color-picker',
+    icon: '/color.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -77,13 +83,6 @@ export const tools = [
     path: '/code-to-pic',
     icon: '/pic.png',
   },
-  {
-    title: '颜色选择器',
-    desc: '颜色选择工具',
-    path: '/color-picker',
-    icon: '/color.png',
-  },
-
   {
     title: '字符统计',
     desc: '字符统计工具',

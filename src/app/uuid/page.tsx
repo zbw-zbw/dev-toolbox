@@ -77,7 +77,7 @@ function UUID() {
             生成
           </Button>
           <CopyBtn value={UUIDs} />
-          <Button type="primary" onClick={clearUUIDs}>
+          <Button type="primary" danger onClick={clearUUIDs}>
             清空
           </Button>
         </Space>

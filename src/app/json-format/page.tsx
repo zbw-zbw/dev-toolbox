@@ -37,7 +37,7 @@ function JSONFormat() {
         <Button type="primary" onClick={formatJSON}>
           格式化
         </Button>
-        <Button type="primary" onClick={handleClearValue}>
+        <Button type="primary" danger onClick={handleClearValue}>
           清空
         </Button>
       </Space>

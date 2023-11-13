@@ -49,14 +49,14 @@ function UrlDecode() {
         <Button type="primary" onClick={handleDecode}>
           解码(decode)
         </Button>
-        <Button type="primary" onClick={handleClearValue}>
+        <Button type="primary" danger onClick={handleClearValue}>
           清空
         </Button>
       </Space>
       <TextArea value={result} onChange={onResultChange} rows={12} placeholder="生成编码/解码后的结果" />
       <Space size="large" className="justify-end w-full mt-4">
         <CopyBtn value={result} />
-        <Button type="primary" onClick={handleClearResult}>
+        <Button type="primary" danger onClick={handleClearResult}>
           清空
         </Button>
       </Space>
