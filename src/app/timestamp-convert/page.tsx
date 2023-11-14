@@ -7,7 +7,7 @@ import { Button, DatePicker, Input, InputNumber, Table } from 'antd';
 import CopyBtn from '@/components/copy-btn';
 import { columns, dataSource, template } from './config';
 
-function Timestamp() {
+function TimestampConvert() {
   const [now, setNow] = useState<string>();
 
   const [date, setDate] = useState<Dayjs | null>(dayjs());
@@ -80,4 +80,4 @@ function Timestamp() {
   );
 }
 
-export default Timestamp;
+export default TimestampConvert;

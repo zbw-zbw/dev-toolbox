@@ -5,8 +5,9 @@ import { Button, InputNumber, Radio, RadioChangeEvent, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 
 import CopyBtn from '@/components/copy-btn';
+import { generateUUID } from '@/utils/generateUUID';
 
-function UUID() {
+function UUIDGenerate() {
   const [count, setCount] = useState<number>(1);
   const [UUIDs, setUUIDs] = useState<string>('');
   const [caseType, setCaseType] = useState<'up' | 'low'>('low');
@@ -26,9 +27,9 @@ function UUID() {
 
   const handleCreateUUIDs = () => {
     for (let index = 0; index < count; index++) {
-      let uuid = crypto.randomUUID();
-
+      let uuid = generateUUID();
       const isUpCase = caseType === 'up';
+
       if (isUpCase) uuid = uuid.toUpperCase();
 
       if (!hasSplitter) uuid = uuid.replace(/-/g, '');
@@ -55,7 +56,7 @@ function UUID() {
       <h2 className="mb-4 text-xl font-bold">UUID 生成器：</h2>
       <div className="mb-4">
         <span>生成数量：</span>
-        <InputNumber value={count} onChange={onCountChange} keyboard />
+        <InputNumber value={count} onChange={onCountChange} keyboard autoFocus />
       </div>
       <div className="mb-4">
         <span>生成结果：</span>
@@ -87,4 +88,4 @@ function UUID() {
   );
 }
 
-export default UUID;
+export default UUIDGenerate;

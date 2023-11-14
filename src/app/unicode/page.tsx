@@ -3,8 +3,9 @@
 import { ChangeEvent, useState } from 'react';
 import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
+
 import CopyBtn from '@/components/copy-btn';
-import { chineseToUnicode, unicodeToChinese } from '@/utils/unicode';
+import { chineseToUnicode, unicodeToChinese } from '@/utils/convertUnicode';
 import { isEmpty } from '@/utils/is';
 
 function Unicode() {
@@ -20,13 +21,13 @@ function Unicode() {
   };
 
   const convertChinese = () => {
-    if (isEmpty(value)) return void message.error('内容不能为空');
+    if (isEmpty(value)) return void message.warning('内容不能为空~');
 
     setResult(chineseToUnicode(value));
   };
 
   const convertUnicode = () => {
-    if (isEmpty(value)) return void message.error('内容不能为空');
+    if (isEmpty(value)) return void message.warning('内容不能为空~');
 
     setResult(unicodeToChinese(value));
   };
@@ -42,8 +43,8 @@ function Unicode() {
   return (
     <div className="w-full mx-auto">
       <h2 className="mb-4 text-xl font-bold">Unicode 编码：</h2>
-      <TextArea value={value} onChange={onValueChange} rows={12} placeholder="请把内容粘贴到此处" />
-      <Space size="large" className="justify-end w-full mt-4 mb-20">
+      <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请把内容粘贴到此处" autoFocus />
+      <Space size="large" className="justify-end w-full mt-4 mb-10">
         <Button type="primary" onClick={convertChinese}>
           中文 转 Unicode
         </Button>
@@ -54,7 +55,7 @@ function Unicode() {
           清空
         </Button>
       </Space>
-      <TextArea value={result} onChange={onResultChange} rows={12} placeholder="生成转换后的结果" />
+      <TextArea value={result} onChange={onResultChange} rows={8} placeholder="生成转换后的结果" />
       <Space size="large" className="justify-end w-full mt-4">
         <CopyBtn value={result} />
         <Button type="primary" danger onClick={handleClearResult}>

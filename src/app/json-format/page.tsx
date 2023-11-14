@@ -4,6 +4,7 @@ import { ChangeEvent, useState } from 'react';
 import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { JsonViewer } from '@textea/json-viewer';
+
 import { isEmpty } from '@/utils/is';
 
 function JSONFormat() {
@@ -15,7 +16,7 @@ function JSONFormat() {
   };
 
   const formatJSON = () => {
-    if (isEmpty(value)) return void message.error('内容不能为空');
+    if (isEmpty(value)) return void message.warning('内容不能为空~');
 
     try {
       setResult(JSON.parse(value));
@@ -32,7 +33,7 @@ function JSONFormat() {
   return (
     <div className="w-full mx-auto">
       <h2 className="mb-4 text-xl font-bold">JSON 格式化：</h2>
-      <TextArea value={value} onChange={onValueChange} rows={12} placeholder="请把内容粘贴到此处" />
+      <TextArea value={value} onChange={onValueChange} rows={12} placeholder="请把内容粘贴到此处" autoFocus />
       <Space size="large" className="justify-end w-full mt-4 mb-20">
         <Button type="primary" onClick={formatJSON}>
           格式化

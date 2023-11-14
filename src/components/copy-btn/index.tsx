@@ -12,9 +12,7 @@ interface IProps {
 
 function CopyBtn({ value, text = '复制', className = '' }: IProps) {
   const handleCopy = () => {
-    if (isEmpty(value)) {
-      return void message.warning('复制的内容不能为空');
-    }
+    if (isEmpty(value)) return void message.warning('内容不能为空~');
 
     try {
       copy(value);

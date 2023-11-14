@@ -2,7 +2,7 @@ export const tools = [
   {
     title: '时间戳转换',
     desc: '时间戳转换工具',
-    path: '/timestamp',
+    path: '/timestamp-convert',
     icon: '/timestamp.png',
   },
   {
@@ -26,7 +26,7 @@ export const tools = [
   {
     title: 'UUID 生成器',
     desc: 'UUID 生成工具',
-    path: '/uuid',
+    path: '/uuid-generate',
     icon: '/uuid.png',
   },
   {
@@ -34,6 +34,18 @@ export const tools = [
     desc: '颜色选择工具',
     path: '/color-picker',
     icon: '/color.png',
+  },
+  {
+    title: '字符统计',
+    desc: '字符统计工具',
+    path: '/str-count',
+    icon: '/count.png',
+  },
+  {
+    title: '进制转换',
+    desc: '进制转换工具',
+    path: '/binary-convert',
+    icon: '/binary.png',
   },
   {
     title: '二维码生成器',
@@ -46,12 +58,6 @@ export const tools = [
     desc: '文件对比工具',
     path: '/file-diff',
     icon: '/diff.png',
-  },
-  {
-    title: '进制转换',
-    desc: '进制转换工具',
-    path: '/binary',
-    icon: '/binary.png',
   },
   {
     title: 'JSON to TS',
@@ -82,12 +88,6 @@ export const tools = [
     desc: '代码生成图片工具',
     path: '/code-to-pic',
     icon: '/pic.png',
-  },
-  {
-    title: '字符统计',
-    desc: '字符统计工具',
-    path: '/str-count',
-    icon: '/count.png',
   },
   {
     title: 'MD5 加密',
