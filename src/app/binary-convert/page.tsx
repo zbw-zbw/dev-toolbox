@@ -82,6 +82,7 @@ function BinaryConvert() {
             placeholder="请输入需要转换的数字/字符"
             value={content}
             onChange={onContentChange}
+            allowClear
             autoFocus
             style={{ width: 336 }}
           />

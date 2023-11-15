@@ -48,6 +48,12 @@ export const tools = [
     icon: '/binary.png',
   },
   {
+    title: '数字转人民币',
+    desc: '数字转人民币工具',
+    path: '/num-to-rmb',
+    icon: '/rmb.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -64,12 +70,6 @@ export const tools = [
     desc: 'JSON 转换成 Typescript 类型工具',
     path: '/json-to-ts',
     icon: '/ts.png',
-  },
-  {
-    title: '数字转人民币',
-    desc: '数字转人民币工具',
-    path: '/num-to-rmb',
-    icon: '/rmb.png',
   },
   {
     title: '代码着色',

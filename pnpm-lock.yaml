@@ -26,6 +26,9 @@ dependencies:
   next:
     specifier: 14.0.1
     version: 14.0.1(react-dom@18.2.0)(react@18.2.0)
+  nzh:
+    specifier: ^1.0.11
+    version: 1.0.11
   react:
     specifier: ^18
     version: 18.2.0
@@ -3214,6 +3217,11 @@ packages:
     dependencies:
       path-key: 4.0.0
     dev: true
+
+  /nzh@1.0.11:
+    resolution:
+      { integrity: sha512-Hmx1wuoj5zoFCEhfic4zW/2csg/vb5BxXAUGUNIyBlSu7ZtZezGVGloqNCnRcHVU1fMC9ZTfvbi6ayPWC1sRSQ== }
+    dev: false
 
   /object-assign@4.1.1:
     resolution:

@@ -63,7 +63,7 @@ function TimestampConvert() {
           <Button type="primary" className="ml-8 mr-8" onClick={convertDate}>
             转换
           </Button>
-          <Input value={newDate} onChange={onNewDateChange} style={{ width: 240 }} />
+          <Input value={newDate} onChange={onNewDateChange} allowClear style={{ width: 240 }} />
           <CopyBtn value={newDate} className="mx-8" />
         </div>
       </div>
