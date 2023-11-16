@@ -1,4 +1,8 @@
 {
   // eslint prettier
-  "extends": ["next/core-web-vitals", "prettier"]
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "no-unused-vars": ["error"],
+    "import/no-unused-modules": ["error"]
+  }
 }

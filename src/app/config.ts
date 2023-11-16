@@ -60,6 +60,12 @@ export const tools = [
     icon: '/lock.png',
   },
   {
+    title: 'IP 地址查询',
+    desc: 'IP 归属地查询工具',
+    path: '/ip-check',
+    icon: '/ip.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -112,11 +118,5 @@ export const tools = [
     desc: 'favicon 制作工具',
     path: '/favicon-create',
     icon: '/favicon.png',
-  },
-  {
-    title: 'IP 地址查询',
-    desc: 'IP 归属地查询工具',
-    path: '/ip-check',
-    icon: '/ip.png',
   },
 ];
