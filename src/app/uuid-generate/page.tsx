@@ -43,10 +43,6 @@ function UUIDGenerate() {
     }
   };
 
-  const clearUUIDs = () => {
-    setUUIDs('');
-  };
-
   const onUUIDsChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setUUIDs(e.target.value);
   };
@@ -73,17 +69,14 @@ function UUIDGenerate() {
         </Radio.Group>
       </div>
       <div className="my-4">
-        <Space>
+        <Space size="large">
           <Button type="primary" onClick={handleCreateUUIDs}>
             生成
           </Button>
           <CopyBtn value={UUIDs} />
-          <Button type="primary" danger onClick={clearUUIDs}>
-            清空
-          </Button>
         </Space>
       </div>
-      <TextArea value={UUIDs} onChange={onUUIDsChange} rows={12} placeholder="生成的 UUID 结果" />
+      <TextArea value={UUIDs} onChange={onUUIDsChange} rows={12} placeholder="生成的 UUID 结果" allowClear />
     </div>
   );
 }

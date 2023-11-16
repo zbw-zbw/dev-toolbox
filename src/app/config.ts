@@ -54,6 +54,12 @@ export const tools = [
     icon: '/rmb.png',
   },
   {
+    title: 'MD5 加密',
+    desc: 'MD5 加密工具',
+    path: '/md5-lock',
+    icon: '/lock.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -88,12 +94,6 @@ export const tools = [
     desc: '代码生成图片工具',
     path: '/code-to-pic',
     icon: '/pic.png',
-  },
-  {
-    title: 'MD5 加密',
-    desc: 'MD5 加密工具',
-    path: '/md5-lock',
-    icon: '/lock.png',
   },
   {
     title: '图片压缩',

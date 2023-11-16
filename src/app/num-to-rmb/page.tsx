@@ -29,20 +29,20 @@ function NumToRMB() {
   return (
     <div className="w-full mx-auto">
       <h2 className="mb-4 text-xl font-bold">数字转人民币：</h2>
-      <Input
-        value={value}
-        onChange={onValueChange}
-        allowClear
-        placeholder="请输入要转换的数字"
-        style={{ width: 200 }}
-      />
-      <Space className="ml-6" size="large">
+      <Space className="mb-4" size="large">
+        <Input
+          value={value}
+          onChange={onValueChange}
+          allowClear
+          placeholder="请输入要转换的数字"
+          style={{ width: 200 }}
+        />
         <Button type="primary" onClick={handleConvert}>
           转换
         </Button>
         <CopyBtn value={result} />
       </Space>
-      <TextArea className="mt-6" value={result} onChange={onResultChange} rows={12} placeholder="生成转换后的结果" />
+      <TextArea value={result} onChange={onResultChange} rows={12} placeholder="生成转换后的结果" allowClear />
     </div>
   );
 }

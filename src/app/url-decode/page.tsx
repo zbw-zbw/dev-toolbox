@@ -35,32 +35,20 @@ function UrlDecode() {
     setValue('');
   };
 
-  const handleClearResult = () => {
-    setResult('');
-  };
-
   return (
     <div className="w-full mx-auto">
       <h2 className="mb-4 text-xl font-bold">URL 编码 / 解码：</h2>
-      <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请把内容粘贴到此处" autoFocus />
-      <Space size="large" className="justify-end w-full mt-4 mb-10">
+      <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请把内容粘贴到此处" autoFocus allowClear />
+      <Space size="large" className="justify-end w-full my-4">
         <Button type="primary" onClick={handleEncode}>
           编码(encode)
         </Button>
         <Button type="primary" onClick={handleDecode}>
           解码(decode)
         </Button>
-        <Button type="primary" danger onClick={handleClearValue}>
-          清空
-        </Button>
-      </Space>
-      <TextArea value={result} onChange={onResultChange} rows={8} placeholder="生成编码/解码后的结果" />
-      <Space size="large" className="justify-end w-full mt-4">
         <CopyBtn value={result} />
-        <Button type="primary" danger onClick={handleClearResult}>
-          清空
-        </Button>
       </Space>
+      <TextArea value={result} onChange={onResultChange} rows={8} placeholder="生成编码/解码后的结果" allowClear />
     </div>
   );
 }
