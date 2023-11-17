@@ -11,22 +11,27 @@ interface IProps {
 }
 
 function CopyBtn({ value, text = '复制', className = '' }: IProps) {
+  const [messageApi, contextHolder] = message.useMessage();
+
   const handleCopy = () => {
-    if (isEmpty(value)) return void message.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
 
     try {
       copy(value);
-      message.success('复制成功');
+      messageApi.success('复制成功');
     } catch (error) {
-      message.error('复制失败');
+      messageApi.error('复制失败');
       console.error('Copy error:', JSON.stringify(error));
     }
   };
 
   return (
-    <Button className={className} type="primary" onClick={handleCopy}>
-      {text}
-    </Button>
+    <>
+      {contextHolder}
+      <Button className={className} type="primary" onClick={handleCopy}>
+        {text}
+      </Button>
+    </>
   );
 }
 

@@ -9,6 +9,8 @@ import { chineseToUnicode, unicodeToChinese } from '@/utils/convertUnicode';
 import { isEmpty } from '@/utils/is';
 
 function Unicode() {
+  const [messageApi, contextHolder] = message.useMessage();
+
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
 
@@ -21,19 +23,20 @@ function Unicode() {
   };
 
   const convertChinese = () => {
-    if (isEmpty(value)) return void message.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
 
     setResult(chineseToUnicode(value));
   };
 
   const convertUnicode = () => {
-    if (isEmpty(value)) return void message.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
 
     setResult(unicodeToChinese(value));
   };
 
   return (
     <div className="w-full mx-auto">
+      {contextHolder}
       <h2 className="mb-4 text-xl font-bold">Unicode 编码：</h2>
       <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请把内容粘贴到此处" autoFocus allowClear />
       <Space size="large" className="justify-end w-full my-4">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import { Button, DatePicker, Input, InputNumber, Table } from 'antd';
 
@@ -8,17 +8,11 @@ import CopyBtn from '@/components/copy-btn';
 import { columns, dataSource, template } from './config';
 
 function TimestampConvert() {
-  const [now, setNow] = useState<string>();
-
   const [date, setDate] = useState<Dayjs | null>(dayjs());
   const [timestamp, setTimestamp] = useState<string>(String(dayjs(date).unix() * 1000));
 
   const [newDate, setNewDate] = useState<string>(dayjs(date).format(template));
   const [newTimestamp, setNewTimestamp] = useState<string>(String(dayjs(date).unix() * 1000));
-
-  useEffect(() => {
-    setNow(dayjs().format(template));
-  }, []);
 
   const onDateChange = (value: Dayjs | null) => {
     setDate(value);

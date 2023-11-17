@@ -44,6 +44,8 @@ const defaultDataSource: DataType[] = binaryList.map((item) => ({
 }));
 
 function BinaryConvert() {
+  const [messageApi, contextHolder] = message.useMessage();
+
   const [value, setValue] = useState<number>(binaryList[2]);
   const [content, setContent] = useState<string>('');
   const [dataSource, setDataSource] = useState(defaultDataSource);
@@ -57,7 +59,7 @@ function BinaryConvert() {
   };
 
   const handleConvert = () => {
-    if (isEmpty(content)) return void message.warning('内容不能为空～');
+    if (isEmpty(content)) return void messageApi.warning('内容不能为空～');
 
     const newDataSource = dataSource.map((item) => ({
       ...item,
@@ -68,6 +70,7 @@ function BinaryConvert() {
 
   return (
     <div className="w-full mx-auto">
+      {contextHolder}
       <h2 className="mb-4 text-xl font-bold">进制转换：</h2>
       <Radio.Group onChange={onValueChange} value={value}>
         {binaryList.map((item) => (

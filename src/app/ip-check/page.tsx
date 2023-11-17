@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { Button, Input, Space, Table, message } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 
@@ -56,9 +56,12 @@ const defaultDataSource: DataType[] = [
 const baseUrl = 'https://api.ip.sb/geoip';
 
 function IPCheck() {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [messageApi, contextHolder] = message.useMessage();
+
   const [value, setValue] = useState<string>('');
   const [dataSource, setDataSource] = useState(defaultDataSource);
+
+  const isLoadingRef = useRef<boolean>(false);
 
   useEffect(() => {
     fetchIPData();
@@ -66,12 +69,12 @@ function IPCheck() {
   }, []);
 
   const fetchIPData = async () => {
-    if (isLoading) return;
+    if (isLoadingRef.current) return;
 
-    setIsLoading(true);
+    isLoadingRef.current = true;
+    messageApi.loading('正在查询...');
     const res = await fetch(`${baseUrl}/${value}`);
     const { ip, organization, country, timezone } = await res.json();
-    console.log(organization?.split(' ')?.[0] || '');
     setDataSource([
       {
         key: ip,
@@ -83,7 +86,8 @@ function IPCheck() {
       },
     ]);
     setValue(ip);
-    setIsLoading(false);
+    isLoadingRef.current = false;
+    messageApi.destroy();
   };
 
   const onValueChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -91,13 +95,14 @@ function IPCheck() {
   };
 
   const handleConvert = async () => {
-    if (isEmpty(value)) return void message.warning('内容不能为空～');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空～');
 
     fetchIPData();
   };
 
   return (
     <div className="w-full mx-auto">
+      {contextHolder}
       <h2 className="mb-4 text-xl font-bold">IP 归属地查询：</h2>
       <div className="my-6">
         <Space size="large">

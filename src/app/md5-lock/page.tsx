@@ -9,6 +9,8 @@ import CopyBtn from '@/components/copy-btn';
 import { isEmpty } from '@/utils/is';
 
 function MD5Lock() {
+  const [messageApi, contextHolder] = message.useMessage();
+
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
 
@@ -21,13 +23,14 @@ function MD5Lock() {
   };
 
   const handleLock = () => {
-    if (isEmpty(value)) return void message.warning('内容不能为空～');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空～');
 
     setResult(crypto.MD5(value).toString());
   };
 
   return (
     <div className="w-full mx-auto">
+      {contextHolder}
       <h2 className="mb-4 text-xl font-bold">MD5 加密：</h2>
       <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请输入要加密的内容" autoFocus allowClear />
       <Space size="large" className="justify-end w-full my-4">
