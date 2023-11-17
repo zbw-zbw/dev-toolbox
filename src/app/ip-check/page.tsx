@@ -45,7 +45,7 @@ const columns: ColumnsType<DataType> = [
 
 const defaultDataSource: DataType[] = [
   {
-    key: 'key',
+    key: '',
     ip: '',
     organization: '',
     region: '',
@@ -53,6 +53,7 @@ const defaultDataSource: DataType[] = [
     timezone: '',
   },
 ];
+
 const baseUrl = 'https://api.ip.sb/geoip';
 
 function IPCheck() {
@@ -95,7 +96,7 @@ function IPCheck() {
   };
 
   const handleConvert = async () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空～');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     fetchIPData();
   };

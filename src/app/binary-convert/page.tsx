@@ -59,7 +59,7 @@ function BinaryConvert() {
   };
 
   const handleConvert = () => {
-    if (isEmpty(content)) return void messageApi.warning('内容不能为空～');
+    if (isEmpty(content)) return void messageApi.warning('内容不能为空');
 
     const newDataSource = dataSource.map((item) => ({
       ...item,

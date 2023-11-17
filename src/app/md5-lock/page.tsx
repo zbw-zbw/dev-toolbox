@@ -23,7 +23,7 @@ function MD5Lock() {
   };
 
   const handleLock = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空～');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     setResult(crypto.MD5(value).toString());
   };

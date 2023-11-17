@@ -22,13 +22,13 @@ function UrlDecode() {
   };
 
   const handleEncode = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     setResult(encodeURIComponent(value));
   };
 
   const handleDecode = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     setResult(decodeURIComponent(value));
   };

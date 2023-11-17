@@ -23,13 +23,13 @@ function Unicode() {
   };
 
   const convertChinese = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     setResult(chineseToUnicode(value));
   };
 
   const convertUnicode = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     setResult(unicodeToChinese(value));
   };

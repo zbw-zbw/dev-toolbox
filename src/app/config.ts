@@ -66,6 +66,12 @@ export const tools = [
     icon: '/ip.png',
   },
   {
+    title: '代码着色',
+    desc: '代码着色/高亮工具',
+    path: '/code-highlight',
+    icon: '/highlight.png',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -82,12 +88,6 @@ export const tools = [
     desc: 'JSON 转换成 Typescript 类型工具',
     path: '/json-to-ts',
     icon: '/ts.png',
-  },
-  {
-    title: '代码着色',
-    desc: '代码着色工具',
-    path: '/code-highlight',
-    icon: '/highlight.png',
   },
   {
     title: '代码在线运行',

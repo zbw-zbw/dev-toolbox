@@ -33,7 +33,7 @@ function Header() {
         </Col>
         <Col span={12} offset={2}>
           <div className="flex">
-            <Input placeholder="请输入工具名称" allowClear autoFocus />
+            <Input placeholder="请输入工具名称" allowClear />
             <Button type="primary" className="ml-4">
               搜索
             </Button>

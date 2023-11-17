@@ -19,13 +19,13 @@ function JSONFormat() {
   };
 
   const formatJSON = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     try {
       setResult(JSON.parse(value));
     } catch (error) {
       messageApi.error('JSON 格式错误');
-      console.error('JSON format error:', error);
+      console.error('JSON format error:', JSON.stringify(error));
     }
   };
 

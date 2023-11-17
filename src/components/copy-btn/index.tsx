@@ -14,7 +14,7 @@ function CopyBtn({ value, text = '复制', className = '' }: IProps) {
   const [messageApi, contextHolder] = message.useMessage();
 
   const handleCopy = () => {
-    if (isEmpty(value)) return void messageApi.warning('内容不能为空~');
+    if (isEmpty(value)) return void messageApi.warning('内容不能为空');
 
     try {
       copy(value);
