@@ -1,4 +1,12 @@
-export const tools = [
+export interface ToolItem {
+  title: string;
+  desc: string;
+  path: string;
+  icon: string;
+  url?: string;
+}
+
+export const tools: ToolItem[] = [
   {
     title: '时间戳转换',
     desc: '时间戳转换工具',
@@ -72,6 +80,34 @@ export const tools = [
     icon: '/highlight.png',
   },
   {
+    title: '代码在线运行',
+    desc: '代码在线运行工具',
+    path: '/code-run',
+    icon: '/code.png',
+    url: 'https://codepen.io/',
+  },
+  {
+    title: '图片压缩',
+    desc: '图片在线压缩工具',
+    path: '/pic-zip',
+    icon: '/zip.png',
+    url: 'https://tinypng.com/',
+  },
+  {
+    title: 'Markdown 编辑器',
+    desc: 'Markdown 在线编辑器',
+    path: '/markdown-editor',
+    icon: '/markdown.png',
+    url: 'https://pandao.github.io/editor.md/',
+  },
+  {
+    title: 'favicon 制作',
+    desc: 'favicon 在线制作工具',
+    path: '/favicon-create',
+    icon: '/favicon.png',
+    url: 'https://www.bitbug.net/',
+  },
+  {
     title: '二维码生成器',
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
@@ -90,33 +126,9 @@ export const tools = [
     icon: '/ts.png',
   },
   {
-    title: '代码在线运行',
-    desc: '代码在线运行工具',
-    path: '/code-run',
-    icon: '/code.png',
-  },
-  {
     title: '代码生成图片',
     desc: '代码生成图片工具',
     path: '/code-to-pic',
     icon: '/pic.png',
-  },
-  {
-    title: '图片压缩',
-    desc: '图片压缩工具',
-    path: '/pic-zip',
-    icon: '/zip.png',
-  },
-  {
-    title: 'Markdown 编辑器',
-    desc: 'Markdown 在线编辑器',
-    path: '/markdown-editor',
-    icon: '/markdown.png',
-  },
-  {
-    title: 'favicon 制作',
-    desc: 'favicon 制作工具',
-    path: '/favicon-create',
-    icon: '/favicon.png',
   },
 ];
