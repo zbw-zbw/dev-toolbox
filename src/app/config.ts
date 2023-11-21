@@ -112,6 +112,14 @@ export const tools: ToolItem[] = [
     desc: '文本 / 链接生成二维码工具',
     path: '/qrcode',
     icon: '/qrcode.png',
+    url: 'https://cli.im/',
+  },
+  {
+    title: '代码生成图片',
+    desc: '代码生成图片工具',
+    path: '/code-to-pic',
+    icon: '/pic.png',
+    url: 'https://carbon.now.sh/',
   },
   {
     title: '文件对比',
@@ -124,11 +132,5 @@ export const tools: ToolItem[] = [
     desc: 'JSON 转换成 Typescript 类型工具',
     path: '/json-to-ts',
     icon: '/ts.png',
-  },
-  {
-    title: '代码生成图片',
-    desc: '代码生成图片工具',
-    path: '/code-to-pic',
-    icon: '/pic.png',
   },
 ];
