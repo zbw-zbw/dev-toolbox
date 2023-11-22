@@ -75,13 +75,13 @@ function IPCheck() {
     isLoadingRef.current = true;
     messageApi.loading('正在查询...');
     const res = await fetch(`${baseUrl}/${value}`);
-    const { ip, organization, country, timezone } = await res.json();
+    const { ip, organization, region, country, timezone } = await res.json();
     setDataSource([
       {
         key: ip,
         ip,
         organization,
-        region: organization?.split(' ')?.[0] || '',
+        region: region || organization?.split(' ')?.[0] || '',
         country,
         timezone,
       },

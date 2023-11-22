@@ -15,7 +15,7 @@ function Home() {
   };
 
   return (
-    <Row gutter={[20, 20]}>
+    <Row gutter={[40, 40]}>
       {tools.map((item) => (
         <Col key={item.title} span={6}>
           <Card
