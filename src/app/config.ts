@@ -122,15 +122,15 @@ export const tools: ToolItem[] = [
     url: 'https://carbon.now.sh/',
   },
   {
-    title: '文件对比',
-    desc: '文件对比工具',
-    path: '/file-diff',
-    icon: '/diff.png',
-  },
-  {
     title: 'JSON to TS',
     desc: 'JSON 转换成 Typescript 类型工具',
     path: '/json-to-ts',
     icon: '/ts.png',
+  },
+  {
+    title: '文件对比',
+    desc: '文件对比工具',
+    path: '/file-diff',
+    icon: '/diff.png',
   },
 ];
