@@ -5,7 +5,6 @@ import { Button, Space, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import * as Diff from 'diff';
 
-// import CopyBtn from '@/components/copy-btn';
 import { isEmpty } from '@/utils/is';
 
 function FileDiff() {
@@ -77,8 +76,8 @@ function FileDiff() {
       />
       {/*  */}
       <div className="mt-2 text-sm">
-        提示：<span className="text-green-500">绿色</span> 代表新增内容，<span className="text-red-500">红色</span>
-        代表删除内容，<span className="text-gray-500"> 灰色 </span>代表未变动。
+        提示：<span className="text-green-500">绿色</span> 代表新增内容，<span className="text-red-500">红色 </span>
+        代表删除内容，<span className="text-gray-500">灰色 </span>代表未变动。
       </div>
     </div>
   );
