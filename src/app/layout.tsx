@@ -13,7 +13,7 @@ import FloatButtonGroup from '@/components/float-buttons';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dev Toolbox',
+  title: 'Dev Toolbox - Your coding partner to improve your efficiency',
   description: 'Your coding partner to improve your efficiency.',
 };
 
