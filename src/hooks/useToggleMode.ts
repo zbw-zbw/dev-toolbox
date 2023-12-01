@@ -8,6 +8,7 @@ function useToggleMode() {
   const isDarkMode = useMemo(() => mode === 'dark', [mode]);
 
   const toggleMode = useCallback(() => {
+    document.documentElement.classList.toggle('dark');
     setMode(isDarkMode ? 'light' : 'dark');
   }, [isDarkMode]);
 

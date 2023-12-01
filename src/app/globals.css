@@ -2,16 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-end-rgb: 255, 255, 255;
-}
-
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .dark {
+    background-color: #1a202c;
+    color: #ffffff;
   }
 }
 
@@ -19,13 +13,8 @@
   display: none;
 }
 
-body {
-  background-color: #fff;
-}
-
 .header {
   height: 80px;
-  background-color: #fff;
   box-shadow:
     0 1px 2px 0 rgba(0, 0, 0, 0.03),
     0 1px 6px -1px rgba(0, 0, 0, 0.02),
