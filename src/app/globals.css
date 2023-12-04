@@ -2,10 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bgColor: #fff;
+  --textColor: #000;
+}
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    --bgColor: #1a202c;
+    --textColor: #fff;
+  }
+
   .dark {
     background-color: #1a202c;
-    color: #ffffff;
+    color: #fff;
+  }
+}
+
+.dark {
+  .ant-input-affix-wrapper,
+  .ant-input {
+    background-color: var(--bgColor);
+  }
+
+  .ant-input {
+    color: var(--textColor);
+  }
+
+  .ant-input-clear-icon svg {
+    fill: var(--textColor);
+  }
+
+  ::-webkit-input-placeholder {
+    color: var(--textColor) !important;
+  }
+
+  .ant-card {
+    background-color: var(--bgColor);
+
+    &:hover {
+      border-color: var(--textColor);
+    }
+
+    .ant-card-head-title {
+      color: var(--textColor);
+    }
+  }
+
+  .tool-icon path {
+    fill: var(--textColor);
   }
 }
 
@@ -28,7 +73,6 @@
 
 .footer {
   height: 80px;
-  border-top: 1px solid #eee;
 }
 
 .tool-card {

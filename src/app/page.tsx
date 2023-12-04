@@ -22,13 +22,13 @@ function Home() {
             className="tool-card cursor-pointer"
             title={
               <div className="flex items-center">
-                <Image src={item.icon} alt="icon" width={24} height={24}></Image>
+                <div className="tool-icon" dangerouslySetInnerHTML={{ __html: item.icon }}></div>
                 <div className="ml-2 text-lg">{item.title}</div>
               </div>
             }
             onClick={() => openPage(item)}
           >
-            <div className="text-sm text-gray-500">{item.desc}</div>
+            <div className="text-sm text-gray-500 dark:text-[color:var(--textColor)]">{item.desc}</div>
           </Card>
         </Col>
       ))}
