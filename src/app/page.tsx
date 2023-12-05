@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { Col, Row, Card } from 'antd';
 import { useRouter } from 'next/navigation';
 
