@@ -28,7 +28,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier . --write --ignore-unknown",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prod": "next build && next start"
   },
   "lint-staged": {
     "**/*": "pnpm prettier"
