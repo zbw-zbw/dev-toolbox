@@ -7,19 +7,15 @@
   --textColor: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bgColor: #1a202c;
-    --textColor: #fff;
-  }
-
-  .dark {
-    background-color: #1a202c;
-    color: #fff;
-  }
+body {
+  color: var(--textColor);
+  background-color: var(--bgColor);
 }
 
 .dark {
+  --bgColor: #1a202c;
+  --textColor: #fff;
+
   .ant-input-affix-wrapper,
   .ant-input {
     background-color: var(--bgColor);
@@ -35,6 +31,11 @@
 
   ::-webkit-input-placeholder {
     color: var(--textColor) !important;
+  }
+
+  .anticon-translation svg,
+  .anticon-github svg {
+    fill: var(--textColor);
   }
 
   .ant-card {

@@ -27,7 +27,7 @@ function Home() {
             }
             onClick={() => openPage(item)}
           >
-            <div className="text-sm text-gray-500 dark:text-[color:var(--textColor)]">{item.desc}</div>
+            <div className="text-sm text-gray-500">{item.desc}</div>
           </Card>
         </Col>
       ))}
