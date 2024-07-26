@@ -47,25 +47,24 @@
     "json-to-ts": "^1.7.0",
     "next": "14.0.1",
     "nzh": "^1.0.11",
-    "react": "^18",
-    "react-dom": "^18",
-    "sharp": "^0.32.6"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.1",
     "@types/diff": "^5.0.8",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.52.0",
     "eslint-config-next": "14.0.1",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
-    "postcss": "^8",
+    "postcss": "^8.4.31",
     "prettier": "3.0.3",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
   }
 }

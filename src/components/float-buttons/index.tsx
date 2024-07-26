@@ -20,7 +20,7 @@ function FloatButtonGroup() {
     <FloatButton.Group style={{ right: 20, bottom: 100 }}>
       <FloatButton icon={<RollbackOutlined />} tooltip="返回首页" onClick={handleBackHome} />
       <FloatButton icon={<SyncOutlined />} tooltip="刷新页面" onClick={handleReload} />
-      <FloatButton.BackTop visibilityHeight={0} tooltip="回到顶部" />
+      <FloatButton.BackTop tooltip="回到顶部" />
     </FloatButton.Group>
   );
 }
