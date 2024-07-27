@@ -21,7 +21,6 @@
     "url": "https://github.com/zbw-zbw/dev-toolbox"
   },
   "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
