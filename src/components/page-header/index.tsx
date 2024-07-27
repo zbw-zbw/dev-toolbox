@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Col, Row, Input, Button, Tooltip, Space, theme } from 'antd';
 import { GithubOutlined, TranslationOutlined } from '@ant-design/icons';
@@ -25,7 +24,7 @@ function Header() {
       <Row align="middle" className="h-full">
         <Col span={4}>
           <div className="flex items-center cursor-pointer" onClick={handleBackHome}>
-            <Image src="/logo.png" alt="logo" width={48} height={48} />
+            <img src="/logo.png" alt="logo" width={48} height={48} />
             <span className="ml-2 font-bold text-xl" style={{ color: theme.useToken().token.colorPrimary }}>
               Dev Toolbox
             </span>
@@ -45,14 +44,14 @@ function Header() {
               <TranslationOutlined className="cursor-pointer" />
             </Tooltip>
             <Tooltip title={isDarkMode ? '日间模式' : '暗夜模式'}>
-              <Image
+              <img
                 src={isDarkMode ? '/light.png' : '/dark.png'}
                 alt="icon"
                 width={20}
                 height={20}
                 className="cursor-pointer"
                 onClick={toggleMode}
-              ></Image>
+              />
             </Tooltip>
             <Tooltip title="GitHub">
               <GithubOutlined className="cursor-pointer" onClick={openGitHubHomePage} />
