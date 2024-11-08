@@ -15,7 +15,7 @@ function ColorPicker() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       <h2 className="mb-4 text-xl font-bold">颜色选择器：</h2>
       <Space size="large">
         <AntdColorPicker allowClear showText trigger="hover" value={color} onChange={onColorChange} />

@@ -69,7 +69,7 @@ function BinaryConvert() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">进制转换：</h2>
       <Radio.Group onChange={onValueChange} value={value}>

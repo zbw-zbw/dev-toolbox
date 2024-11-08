@@ -2,7 +2,7 @@
 
 import { ChangeEvent, useState } from 'react';
 import { Button, Input, Space, message } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+
 import nzh from 'nzh';
 
 import CopyBtn from '@/components/copy-btn';
@@ -29,7 +29,7 @@ function NumToRMB() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">数字转人民币：</h2>
       <Space className="mb-4" size="large">
@@ -45,7 +45,7 @@ function NumToRMB() {
         </Button>
         <CopyBtn value={result} />
       </Space>
-      <TextArea value={result} onChange={onResultChange} rows={12} placeholder="生成转换后的结果" allowClear />
+      <Input.TextArea value={result} onChange={onResultChange} rows={12} placeholder="生成转换后的结果" allowClear />
     </div>
   );
 }

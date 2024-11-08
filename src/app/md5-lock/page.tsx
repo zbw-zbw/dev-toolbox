@@ -1,8 +1,7 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, Space, message } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Input, Space, message } from 'antd';
 import crypto from 'crypto-js';
 
 import CopyBtn from '@/components/copy-btn';
@@ -29,17 +28,24 @@ function MD5Lock() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">MD5 加密：</h2>
-      <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请输入要加密的内容" autoFocus allowClear />
+      <Input.TextArea
+        value={value}
+        onChange={onValueChange}
+        rows={8}
+        placeholder="请输入要加密的内容"
+        autoFocus
+        allowClear
+      />
       <Space size="large" className="justify-end w-full my-4">
         <Button type="primary" onClick={handleLock}>
           加密
         </Button>
         <CopyBtn value={result} />
       </Space>
-      <TextArea value={result} onChange={onResultChange} rows={8} placeholder="生成加密后的结果" allowClear />
+      <Input.TextArea value={result} onChange={onResultChange} rows={8} placeholder="生成加密后的结果" allowClear />
     </div>
   );
 }

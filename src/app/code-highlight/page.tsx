@@ -1,8 +1,7 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, Space, message } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Input, Space, message } from 'antd';
 import 'highlight.js/styles/atom-one-dark.css';
 import hljs from 'highlight.js';
 
@@ -32,10 +31,17 @@ function CodeHighlight() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">代码着色：</h2>
-      <TextArea value={value} onChange={onValueChange} rows={8} placeholder="请把内容粘贴到此处" autoFocus allowClear />
+      <Input.TextArea
+        value={value}
+        onChange={onValueChange}
+        rows={8}
+        placeholder="请把内容粘贴到此处"
+        autoFocus
+        allowClear
+      />
       <Space size="large" className="justify-end w-full my-4">
         <Button type="primary" onClick={handleHighlight}>
           着色

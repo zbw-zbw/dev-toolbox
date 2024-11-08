@@ -102,7 +102,7 @@ function IPCheck() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">IP 归属地查询：</h2>
       <div className="my-6">

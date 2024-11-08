@@ -1,8 +1,7 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, InputNumber, Radio, RadioChangeEvent, Space } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Input, InputNumber, Radio, RadioChangeEvent, Space } from 'antd';
 
 import CopyBtn from '@/components/copy-btn';
 import { generateUUID } from '@/utils/generateUUID';
@@ -48,7 +47,7 @@ function UUIDGenerate() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       <h2 className="mb-4 text-xl font-bold">UUID 生成器：</h2>
       <div className="mb-4">
         <span>生成数量：</span>
@@ -76,7 +75,7 @@ function UUIDGenerate() {
           <CopyBtn value={UUIDs} />
         </Space>
       </div>
-      <TextArea value={UUIDs} onChange={onUUIDsChange} rows={12} placeholder="生成的 UUID 结果" allowClear />
+      <Input.TextArea value={UUIDs} onChange={onUUIDsChange} rows={12} placeholder="生成的 UUID 结果" allowClear />
     </div>
   );
 }

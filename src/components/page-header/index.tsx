@@ -1,18 +1,69 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { Col, Row, Input, Button, Tooltip, Space, theme } from 'antd';
-import { GithubOutlined, TranslationOutlined } from '@ant-design/icons';
+import React, { useCallback } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { Col, Row, Input, Tooltip, Space, theme } from 'antd';
+import { GithubOutlined, SearchOutlined, TranslationOutlined } from '@ant-design/icons';
 
-import useToggleMode from '@/hooks/useToggleMode';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectKeyword, selectTools, setKeyword, setSearchResults, ToolItem } from '@/store/toolsSlice';
+import { debounce } from 'lodash';
+import { pinyin } from 'pinyin-pro';
+import { selectIsDarkMode, toggleMode } from '@/store/darkModeSlice';
 
 function Header() {
-  const [isDarkMode, toggleMode] = useToggleMode();
-
   const router = useRouter();
+
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector(selectIsDarkMode);
+  const keyword = useSelector(selectKeyword);
+  const tools = useSelector(selectTools);
+
+  const isCompositionStartRef = React.useRef(false);
 
   const handleBackHome = () => {
     router.push('/');
+  };
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    dispatch(setKeyword(value));
+
+    if (isCompositionStartRef.current) return;
+
+    debouncedSearch(value);
+  };
+
+  const onCompositionStart = () => {
+    isCompositionStartRef.current = true;
+  };
+
+  const onCompositionEnd = () => {
+    isCompositionStartRef.current = false;
+    handleSearchTools(keyword);
+  };
+
+  const handleSearchTools = (value: string) => {
+    const filteredTools = tools.filter((item: ToolItem) => {
+      const toolTitlePinyin = pinyin(item.title, {
+        toneType: 'none',
+        separator: '',
+      }).toLowerCase();
+
+      return toolTitlePinyin.includes(value.toLowerCase());
+    });
+
+    dispatch(setSearchResults(filteredTools));
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedSearch = useCallback(debounce(handleSearchTools, 500), []);
+
+  const handleToggleMode = () => {
+    dispatch(toggleMode());
   };
 
   const openGitHubHomePage = () => {
@@ -20,8 +71,8 @@ function Header() {
   };
 
   return (
-    <div className="header sticky top-0 z-50 w-full px-10">
-      <Row align="middle" className="h-full">
+    <div className="header sticky top-0 z-50 w-full">
+      <Row align="middle" className="header-content h-full mx-auto">
         <Col span={4}>
           <div className="flex items-center cursor-pointer" onClick={handleBackHome}>
             <img src="/logo.png" alt="logo" width={48} height={48} />
@@ -31,12 +82,19 @@ function Header() {
           </div>
         </Col>
         <Col span={12} offset={2}>
-          <div className="flex">
-            <Input placeholder="请输入工具名称" allowClear />
-            <Button type="primary" className="ml-4">
-              搜索
-            </Button>
-          </div>
+          {isHome && (
+            <div className="header-input flex">
+              <Input
+                prefix={<SearchOutlined />}
+                placeholder="请输入工具名称"
+                allowClear
+                value={keyword}
+                onChange={onChange}
+                onCompositionStart={onCompositionStart}
+                onCompositionEnd={onCompositionEnd}
+              />
+            </div>
+          )}
         </Col>
         <Col span={4} offset={2} className="text-right">
           <Space size="large">
@@ -50,7 +108,7 @@ function Header() {
                 width={20}
                 height={20}
                 className="cursor-pointer"
-                onClick={toggleMode}
+                onClick={handleToggleMode}
               />
             </Tooltip>
             <Tooltip title="GitHub">

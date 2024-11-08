@@ -1,8 +1,7 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import { Button, Space, message } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Input, Space, message } from 'antd';
 import { JsonViewer } from '@textea/json-viewer';
 
 import { isEmpty } from '@/utils/is';
@@ -31,10 +30,10 @@ function JSONFormat() {
 
   return (
     <NoSsrWrapper>
-      <div className="w-full mx-auto">
+      <div className="sub-page">
         {contextHolder}
         <h2 className="mb-4 text-xl font-bold">JSON 格式化：</h2>
-        <TextArea
+        <Input.TextArea
           value={value}
           onChange={onValueChange}
           rows={12}

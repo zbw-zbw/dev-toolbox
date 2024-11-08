@@ -39,7 +39,7 @@ function TimestampConvert() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       <h2 className="mb-4 text-xl font-bold">时间戳转换：</h2>
       <div>
         <div className="mb-2 font-medium">获取时间戳</div>

@@ -1,8 +1,7 @@
 'use client';
 
 import { ChangeEvent, useRef, useState } from 'react';
-import { Button, Space, message } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Input, Space, message } from 'antd';
 import * as Diff from 'diff';
 
 import { isEmpty } from '@/utils/is';
@@ -45,10 +44,10 @@ function FileDiff() {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="sub-page">
       {contextHolder}
       <h2 className="mb-4 text-xl font-bold">文件对比：</h2>
-      <TextArea
+      <Input.TextArea
         value={value}
         onChange={onValueChange}
         rows={8}
@@ -56,7 +55,7 @@ function FileDiff() {
         autoFocus
         allowClear
       />
-      <TextArea
+      <Input.TextArea
         className="mt-4"
         value={result}
         onChange={onResultChange}
