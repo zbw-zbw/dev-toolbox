@@ -30,8 +30,9 @@ body {
   display: none;
 }
 
-.page {
-  min-height: 100vh;
+.page,
+.sub-page {
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
 }
 
 .header {
